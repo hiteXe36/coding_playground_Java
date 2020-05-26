@@ -1,8 +1,8 @@
 package coding_playground_Java.ScoreboardChallenge;
 
-public class Player {
+public class Player implements Comparable<Player> {
 
-    //attributes
+    // attributes
     private final String _name;
     private int _points;
 
@@ -35,5 +35,15 @@ public class Player {
     @Override
     public String toString() {
         return "Player " + _name + ", has " + _points + " points";
+    }
+
+    @Override
+    public int compareTo(Player player2) {
+        if(this.getPoints() > player2.getPoints()){
+            return 1;
+        }
+        else {
+            return -1;
+        }
     }
 }
