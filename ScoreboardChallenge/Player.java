@@ -27,9 +27,13 @@ public class Player {
         _points += points;
     }
 
-    public String printPlayerInfo() {
+    public void printPlayerInfo() {
         final String playerInfo = "Player: " + _name + " has " + _points + " points.";
         System.out.println(playerInfo);
-        return playerInfo;
+    }
+
+    @Override
+    public String toString() {
+        return "Player " + _name + ", has " + _points + " points";
     }
 }

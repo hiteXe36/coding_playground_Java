@@ -14,7 +14,7 @@ public class Scoreboard {
 
     public void listPlayers(){
         for(Player player: _playerList){
-            System.out.println(" "+player.printPlayerInfo());
+            System.out.println(" "+player.toString());
         }
     }
 
