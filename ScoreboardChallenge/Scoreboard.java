@@ -1,6 +1,7 @@
 package coding_playground_Java.ScoreboardChallenge;
 
 import java.util.List;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Scoreboard {
@@ -20,18 +21,22 @@ public class Scoreboard {
 
     public void addPlayerToList(Player player){
         _playerList.add(player);
+        sortList();
+        printScoreboard();
     }
 
     public void addPointsToPlayer(Player player, int points){
         player.addPoints(points);
+        sortList();
+        printScoreboard();
     }
 
-    public void printScoreboard(){
+    private void printScoreboard(){
         System.out.println(_playerList.toString());
     }
 
     private void sortList(){
-        //TODO
+        Collections.sort(_playerList);
     }
 
 }

@@ -39,7 +39,7 @@ public class Player implements Comparable<Player> {
 
     @Override
     public int compareTo(Player player2) {
-        if(this.getPoints() > player2.getPoints()){
+        if(this.getPoints() < player2.getPoints()){
             return 1;
         }
         else {
